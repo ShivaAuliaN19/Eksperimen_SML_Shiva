@@ -2,4 +2,4 @@ pandas
 nltk
 Sastrawi
 scikit-learn
-pip openpyxl
+openpyxl
