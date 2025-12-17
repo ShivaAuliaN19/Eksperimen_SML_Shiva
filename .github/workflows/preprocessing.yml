@@ -33,3 +33,13 @@ jobs:
     - name: Run preprocessing script
       run: |
         python preprocessing/automate_Shiva.py
+    - name: Upload preprocessing result
+      uses: actions/upload-artifact@v4
+      with:
+        name: hasil-preprocessing
+        path: |
+          Hasil_Preprocessing_dan_Labelling.csv
+          train_data.csv
+          test_data.csv
+
+        
