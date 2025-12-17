@@ -190,14 +190,15 @@ if __name__ == "__main__":
     print("SCRIPT DIMULAI")
 
     preprocessing_pipeline(
-        r"C:\Users\SHIVA\Downloads\Eksperimen_SML_Shiva\dataset_raw\hasil_scraper_review_app_duolingo.csv",
-        r"C:\Users\SHIVA\Downloads\Eksperimen_SML_Shiva\dataset_raw\kamuskatabaku.xlsx",
-        r"C:\Users\SHIVA\Downloads\Eksperimen_SML_Shiva\dataset_raw\lexicon_positif.csv",
-        r"C:\Users\SHIVA\Downloads\Eksperimen_SML_Shiva\dataset_raw\lexicon_negatif.csv"    
+    "dataset_raw/hasil_scraper_review_app_duolingo.csv",
+    "dataset_raw/kamuskatabaku.xlsx",
+    "dataset_raw/lexicon_positif.csv",
+    "dataset_raw/lexicon_negatif.csv"
     )
-
+  
 
     print("SCRIPT SELESAI")
+
 
 
 
