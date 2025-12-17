@@ -1,0 +1,40 @@
+name: Preprocessing Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas nltk scikit-learn openpyxl Sastrawi
+
+      - name: Download NLTK resources
+        run: |
+          python -m nltk.downloader stopwords
+
+      - name: Run preprocessing script
+        run: |
+          python preprocessing/automate_preprocessing.py
+
+      - name: Upload preprocessing result
+        uses: actions/upload-artifact@v4
+        with:
+          name: hasil-preprocessing
+          path: |
+            *.csv
+
